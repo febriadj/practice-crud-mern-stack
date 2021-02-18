@@ -1,0 +1,9 @@
+#navbar {
+  width: 100%;
+  display: flex; justify-content: center;
+}
+#wrap {
+  width: 1224px;
+  height: 50px;
+  display: flex; justify-content: space-between; align-items: center;
+}

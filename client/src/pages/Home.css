@@ -1,0 +1,17 @@
+* { padding: 0; margin: 0; }
+body { font-family: 'Courier New', Courier, monospace; font-size: 14px; }
+#container {
+  width: 100%;
+  display: flex; justify-content: center;
+  padding: 60px 0;
+}
+#wrap {
+  width: 1224px;
+  margin: 0px 20px;
+}
+.lists {
+  width: 200px;
+}
+.lists .author {
+  margin: 5px 0 10px 0;
+}
