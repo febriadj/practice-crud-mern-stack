@@ -1,2 +1,31 @@
 GET http://localhost:5000/api
 Content-Type: application/json
+
+###
+
+POST http://localhost:5000/api
+Content-Type: application/json
+
+{
+  "title": "Attack on Titan",
+  "author": "Hajime Isayama",
+  "rating": 9.12,
+  "synopsis": "Lorem ipsum dolor sit amet"
+}
+
+###
+
+PUT http://localhost:5000/api?upd=Attack on Titan
+Content-Type: application/json
+
+{
+  "title": "Shingeki no Kyojin",
+  "author": "Hajime Isayama",
+  "rating": 9.08,
+  "synopsis": "Lorem ipsum dolor sit amet"
+}
+
+###
+
+DELETE http://localhost:5000/api?del=Shingeki no Kyojin
+Content-Type: application/json
