@@ -40,7 +40,7 @@ exports.updateList = (req, res, next) => {
     .then(result => {
       if ( result ) return console.log('successfully update list')
       
-      console.log('list tidak ditemukan')
+      console.log('list not found')
       res.sendStatus(403)
     })
 }
@@ -54,7 +54,7 @@ exports.deleteList = (req, res, next) => {
     .then(result => {
       if ( result ) return console.log('successfully delete data')
       
-      console.log('list tidak ditemukan')
+      console.log('list not found')
       res.sendStatus(403)
     })
     .catch(err => console.log(err))
