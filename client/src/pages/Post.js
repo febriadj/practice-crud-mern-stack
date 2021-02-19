@@ -1,14 +1,17 @@
 import React from 'react'
-import Navbar from '../components/navbar/Navbar'
+import './Post.css'
+import Navbar from '../components/Navbar'
 
 const Post = () => {
   return (
-    <div id="post">
-      <div id="wrap">
-        < Navbar />
-        <p>Post Page</p>
+    < >
+      < Navbar />
+      <div id="container">
+        <div id="container-wrap">
+          <p>Post Page</p>
+        </div>
       </div>
-    </div>
+    </>
   )
 }
 

@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import './Home.css'
-import Navbar from '../components/navbar/Navbar'
+import { Link } from 'react-router-dom'
+
+import Navbar from '../components/Navbar'
 
 export default class Home extends Component {
   constructor(props) {
@@ -15,7 +17,8 @@ export default class Home extends Component {
         title: list.title,
         author: list.author,
         rating: list.rating,
-        synopsis: list.synopsis
+        synopsis: list.synopsis,
+        url: list.url
       })))
       .then(result => this.setState({ lists: result }))
   }
@@ -24,22 +27,21 @@ export default class Home extends Component {
     const { lists } = this.state
     return (
       < >
-        < Navbar />
-        <div id="container">
-          <div id="wrap">
-            {
-              lists.length > 0 ? lists.map( ( list, index ) => {
-                return (
-                  <div className="lists" key={ index }>
-                    <h2 className="title">{ list.title }</h2>
-                    <p className="author">{ list.author }</p>
-                    <p className="rating">Rating: { list.rating }</p>
-                  </div>
-                )
-              }) : null
-            }
-          </div>
+      < Navbar />
+      <div id="container">
+        <div id="container-wrap">
+          { lists.length > 0 ? lists.map( ( list, index ) => {
+            return (
+              <div className="lists" key={ index }>
+                <h2 className="title">{ list.title }</h2>
+                <p className="author">- { list.author }</p>
+                <p className="rating">Rating: { list.rating }</p>
+                <Link to={`/details?title=${ list.url }`} className="link">Details</Link>
+              </div>
+            )
+          }) : null }
         </div>
+      </div>
       </>
     )
   }

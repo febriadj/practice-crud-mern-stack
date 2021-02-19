@@ -10,8 +10,4 @@ body { font-family: 'Roboto Mono', sans-serif; font-size: 14px; }
 #container-wrap {
   width: 1024px;
   margin: 0px 20px;
-  display: grid; grid-template-columns: 1fr; gap: 40px;
 }
-.lists { border-bottom: 1px solid #ddd; padding: 0 0 15px 0; }
-.lists .author { margin: 3px 0 15px 0; }
-.lists .link { text-decoration: none; margin: 30px 0 0 0; display: block; }

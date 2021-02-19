@@ -7,7 +7,7 @@ POST http://localhost:5000/api
 Content-Type: application/json
 
 {
-  "title": "Attack on Titan",
+  "title": "Shingeki no Kyojin",
   "author": "Hajime Isayama",
   "rating": 9.12,
   "synopsis": "Lorem ipsum dolor sit amet"

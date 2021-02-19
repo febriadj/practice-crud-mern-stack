@@ -9,13 +9,20 @@ exports.getList = (req, res, next) => {
 
 exports.addList = (req, res, next) => {
   const { title, author, rating, synopsis } = req.body
-
+  
   if ( !title || !author || !rating || !synopsis ) return console.log('there is a form that has not been filled in')
+  
+  // create url from title
+  const urlConfig = [...title]
+  for ( const i in urlConfig ) if ( urlConfig[i] === ' ' ) urlConfig[i] = '-'
+  const url = urlConfig.join("").toLowerCase()
+
   const animelist = new animeLists({
     title: title,
     author: author,
     rating: rating,
-    synopsis: synopsis
+    synopsis: synopsis,
+    url: url
   })
 
   animelist.save()
@@ -33,7 +40,7 @@ exports.updateList = (req, res, next) => {
     title: title,
     author: author,
     rating: rating,
-    synopsis: synopsis
+    synopsis: synopsis,
   }
 
   animelists.findOneAndUpdate({ title: query }, newAnimeList)

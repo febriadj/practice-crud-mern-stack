@@ -9,11 +9,12 @@ const animeListsSchema = new Schema({
   },
   author: String,
   rating: Number,
+  synopsis: String,
+  url: String,
   created: {
     type: Date,
     default: Date.now
-  },
-  synopsis: String
+  }
 })
 
 module.exports = mongoose.model('animelist', animeListsSchema)
