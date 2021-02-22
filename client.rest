@@ -3,13 +3,18 @@ Content-Type: application/json
 
 ###
 
+GET http://localhost:5000/api/tensei-shitara-slime
+Content-Type: application/json
+
+###
+
 POST http://localhost:5000/api
 Content-Type: application/json
 
 {
-  "title": "Shingeki no Kyojin",
-  "author": "Hajime Isayama",
-  "rating": 9.12,
+  "title": "Tensei Shitara Slime",
+  "author": "Fuse",
+  "rating": 8.82,
   "synopsis": "Lorem ipsum dolor sit amet"
 }
 

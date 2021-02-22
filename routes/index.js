@@ -6,6 +6,9 @@ router.post('/api', require('./controllers').addList)
 router.put('/api', require('./controllers').updateList)
 router.delete('/api', require('./controllers').deleteList)
 
+// middleware search
+router.get('/api/:title', require('./search').searchByTitle)
+
 router.use((req, res, next) => {
   res.status(404).json({ body: 'Opps 404, Page Not found' })
 })

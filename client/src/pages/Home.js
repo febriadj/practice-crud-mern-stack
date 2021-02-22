@@ -27,21 +27,26 @@ export default class Home extends Component {
     const { lists } = this.state
     return (
       < >
-      < Navbar />
-      <div id="container">
-        <div id="container-wrap">
-          { lists.length > 0 ? lists.map( ( list, index ) => {
-            return (
-              <div className="lists" key={ index }>
-                <h2 className="title">{ list.title }</h2>
-                <p className="author">- { list.author }</p>
-                <p className="rating">Rating: { list.rating }</p>
-                <Link to={`/details?title=${ list.url }`} className="link">Details</Link>
-              </div>
-            )
-          }) : null }
+        < Navbar />
+        <div id="container">
+          <div id="container-wrap">
+            { lists.length > 0 ? lists.map( ( list, index ) => {
+              return (
+                <div className="lists" key={ index }>
+                  <h2 className="title">{ list.title }</h2>
+                  <p className="author">- { list.author }</p>
+                  <p className="rating">Rating: { list.rating }</p>
+                  <Link to={{
+                    pathname: `details/${list.url}`,
+                    state: {
+                      synopsis: list.synopsis
+                    }
+                  }} className="link">Details</Link>
+                </div>
+              )
+            }) : null }
+          </div>
         </div>
-      </div>
       </>
     )
   }

@@ -1,4 +1,3 @@
-const animelists = require('../models/animelists')
 const animeLists = require('../models/animelists')
 
 exports.getList = (req, res, next) => {
